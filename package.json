@@ -1,0 +1,60 @@
+{
+  "name": "ryor-vscode",
+  "description": "Syntax highlighting for ryor task definitions",
+  "version": "0.0.1",
+  "author": "Scott Steven Rodriguez <scott@movecodemove.com>",
+  "bugs": {
+    "url": "https://github.com/ryor/ryor-vscode/issues",
+    "email": "scott@movecodemove.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryor/ryor-vscode.git"
+  },
+  "publisher": "ryor",
+  "displayName": "ryor",
+  "license": "MIT",
+  "icon": "./icons/extension-icon.png",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "bun",
+    "javascript",
+    "node",
+    "tasks",
+    "typescript"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ryor",
+        "aliases": [
+          "ryor"
+        ],
+        "configuration": "./language-configuration.json",
+        "extensions": [
+          ".ryor"
+        ],
+        "icon": {
+          "dark": "./icons/language-icon.png",
+          "light": "./icons/language-icon.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ryor",
+        "path": "./syntaxes/ryor.tmLanguage.json",
+        "scopeName": "source.ryor"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.1.0",
+    "js-yaml": "^4.1.0"
+  }
+}

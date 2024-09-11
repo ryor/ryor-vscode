@@ -1,0 +1,42 @@
+$schema: https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json
+name: ryor
+scopeName: source.ryor
+fileTypes:
+  - ryor
+patterns:
+  - match: ^\s*#.*$
+    name: comment.line.number-sign
+
+  - comment: Category
+    match: ^\s*\[\s*([^\]\n\r]+?)\s*\]\s*$
+    captures:
+      1: { name: entity.name.type.ryor }
+
+  - comment: Task
+    match: ^\s*(?![-.])([a-z][a-zA-Z0-9]+)\s*(?::\s*([^\|\n\r]+))?(?:\|\s*((?!\/)[^ \n\r\t]+))?\s*$
+    captures:
+      1: { name: entity.name.function.ryor }
+      2: { name: string.unquoted.ryor }
+      3: { name: variable.other.ryor }
+
+  - comment: Task flag argument
+    match: ^\s*--([a-z][a-zA-Z0-9]+)\s*(?:,\s*-([a-zA-Z0-9]))?\s*(?::\s*([^\|\n\r]*?))?(?:\|\s*(boolean|number|string))?$
+    captures:
+      1: { name: variable.parameter.ryor }
+      2: { name: variable.other.ryor }
+      3: { name: string.unquoted.ryor }
+      4: { name: support.type.ryor }
+
+  - comment: Task positional argument
+    match: ^\s*\.\s*([a-z][a-zA-Z0-9]+)\s*(?::\s*([^\|\n\r]*?))?(?:\|\s*(number|string))?$
+    captures:
+      1: { name: variable.parameter.ryor }
+      2: { name: string.unquoted.ryor }
+      3: { name: support.type.ryor }
+
+  - comment: Task rest argument
+    match: ^\s*\.{3}([a-z][a-zA-Z0-9]+)\s*(?::\s*([^\|\n\r]*?))?(?:\|\s*(array|string))?$
+    captures:
+      1: { name: variable.parameter.ryor }
+      2: { name: string.unquoted.ryor }
+      3: { name: support.type.ryor }
