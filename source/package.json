@@ -1,0 +1,31 @@
+{
+  "publisher": "ryor",
+  "displayName": "ryor",
+  "icon": "./icon-extension.png",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": ["Programming Languages"],
+  "keywords": ["bun", "javascript", "node", "tasks", "typescript"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ryor",
+        "aliases": ["ryor"],
+        "configuration": "./language-configuration.json",
+        "extensions": [".ryor"],
+        "icon": {
+          "dark": "./icon-language.png",
+          "light": "./icon-language.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ryor",
+        "path": "./ryor.tmLanguage.json",
+        "scopeName": "source.ryor"
+      }
+    ]
+  }
+}
