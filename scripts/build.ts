@@ -1,11 +1,6 @@
 import { resolve } from 'node:path'
 import { $, write } from 'bun'
-
-const PROJECT_DIRECTORY_PATH = new URL('..', import.meta.url).pathname
-
-const BUILD_DIRECTORY_PATH = resolve(PROJECT_DIRECTORY_PATH, 'build')
-
-const DISTRIBUTION_DIRECTORY_PATH = resolve(PROJECT_DIRECTORY_PATH, 'dist')
+import { BUILD_DIRECTORY_PATH, PROJECT_DIRECTORY_PATH } from './shared'
 
 const SOURCE_DIRECTORY_PATH = resolve(PROJECT_DIRECTORY_PATH, 'source')
 
@@ -17,7 +12,8 @@ await $`
   cp ${resolve(PROJECT_DIRECTORY_PATH, 'README')} ${resolve(BUILD_DIRECTORY_PATH, 'readme.md')}
   cp ${resolve(SOURCE_DIRECTORY_PATH, 'icon-extension.png')} ${BUILD_DIRECTORY_PATH}
   cp ${resolve(SOURCE_DIRECTORY_PATH, 'icon-language.png')} ${BUILD_DIRECTORY_PATH}
-  js-yaml ${resolve(SOURCE_DIRECTORY_PATH, 'ryor.tmLanguage.yaml')} > ${resolve(BUILD_DIRECTORY_PATH, 'ryor.tmLanguage.json')}
+  js-yaml ${resolve(SOURCE_DIRECTORY_PATH, 'ryor.inline.yaml')} > ${resolve(BUILD_DIRECTORY_PATH, 'ryor.inline.json')}
+  js-yaml ${resolve(SOURCE_DIRECTORY_PATH, 'ryor.source.yaml')} > ${resolve(BUILD_DIRECTORY_PATH, 'ryor.source.json')}
   touch ${resolve(BUILD_DIRECTORY_PATH, '.vscodeignore')}
 `
 
@@ -32,8 +28,4 @@ await write(resolve(BUILD_DIRECTORY_PATH, 'package.json'), JSON.stringify(packag
 await $`
   cd ${BUILD_DIRECTORY_PATH}
   vsce package
-  rm -rf ${DISTRIBUTION_DIRECTORY_PATH}
-  mkdir ${DISTRIBUTION_DIRECTORY_PATH}
-  cp $(ls *.vsix) ${DISTRIBUTION_DIRECTORY_PATH}
-  rm -rf ${BUILD_DIRECTORY_PATH}
 `

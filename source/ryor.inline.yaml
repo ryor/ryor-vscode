@@ -1,0 +1,14 @@
+fileTypes:
+  - js
+  - ts
+
+injectionSelector: "L:source.js, L:source.ts"
+
+patterns:
+  - begin: \bryor\`
+    end: \`
+    name: markup.raw.ryor
+    patterns:
+      - include: source.ryor
+
+scopeName: inline.ryor

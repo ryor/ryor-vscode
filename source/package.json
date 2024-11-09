@@ -6,7 +6,7 @@
     "vscode": "^1.0.0"
   },
   "categories": ["Programming Languages"],
-  "keywords": ["bun", "javascript", "node", "tasks", "typescript"],
+  "keywords": ["bun", "deno", "javascript", "node", "tasks", "typescript"],
   "contributes": {
     "languages": [
       {
@@ -23,8 +23,13 @@
     "grammars": [
       {
         "language": "ryor",
-        "path": "./ryor.tmLanguage.json",
+        "path": "./ryor.source.json",
         "scopeName": "source.ryor"
+      },
+      {
+        "injectTo": ["source.js", "source.ts"],
+        "path": "./ryor.inline.json",
+        "scopeName": "inline.ryor"
       }
     ]
   }

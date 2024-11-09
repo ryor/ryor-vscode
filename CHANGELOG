@@ -21,3 +21,21 @@ All notable changes to the "ryor-vscode" extension will be documented in this fi
 ### Changed
 
 - All task value names are now expected to be kebab-case instead of camel-case
+
+## [0.0.4] - 2024-11-09
+
+### Changed
+
+- Added support for JavaScript and TypeScript inline template function (ryor`...`) syntax highlighting
+
+## [0.0.5] - 2024-11-09
+
+### Changed
+
+- Updated change log
+
+## [0.0.6] - 2024-11-09
+
+### Changed
+
+- Grammar file fixes and tweaks

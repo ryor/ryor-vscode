@@ -1,7 +1,7 @@
 {
   "name": "ryor-vscode",
   "description": "Syntax highlighting for ryor task definitions",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "author": "Scott Steven Rodriguez <scott@movecodemove.com>",
   "bugs": {
     "url": "https://github.com/ryor/ryor-vscode/issues",
@@ -15,13 +15,15 @@
   "displayName": "ryor",
   "license": "MIT",
   "scripts": {
-    "build": "bun ./scripts/package.ts"
+    "build": "bun ./scripts/build.ts",
+    "publish": "bun ./scripts/publish.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@types/bun": "^1.1.12",
-    "@types/node": "^22.8.6",
+    "@types/bun": "^1.1.13",
+    "@types/node": "^22.9.0",
     "@vscode/vsce": "^3.2.1",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "ovsx": "^0.10.0"
   }
 }
