@@ -1,4 +1,17 @@
 {
+  "name": "ryor-vscode",
+  "description": "Syntax highlighting for ryor task definitions",
+  "version": "0.0.10",
+  "author": "Scott Steven Rodriguez <scott@movecodemove.com>",
+  "bugs": {
+    "url": "https://github.com/ryor/ryor-vscode/issues",
+    "email": "scott@movecodemove.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryor/ryor-vscode.git"
+  },
+  "license": "MIT",
   "publisher": "ryor",
   "displayName": "ryor",
   "icon": "./icon-extension.png",

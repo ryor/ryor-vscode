@@ -1,0 +1,7 @@
+complete -W 'aliases build js-yaml log publish update' run
+alias run='cd /home/dev/Projects/ryor-vscode && deno --allow-run=cat,cp,ls,mkdir,rm,touch,./node_modules/.bin/js-yaml,./node_modules/.bin/ovsx,./node_modules/.bin/vsce -E=PATH -N=jsr.io,registry.npmjs.com -R=./ -W=./build,./dist,./package.json,./tasks tasks/runner.ts --aliased'
+alias build='run build'
+alias js-yaml='run js-yaml'
+alias log='run log'
+alias publish='run publish'
+alias update='run update'

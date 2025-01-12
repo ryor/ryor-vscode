@@ -39,3 +39,30 @@ All notable changes to the "ryor-vscode" extension will be documented in this fi
 ### Changed
 
 - Grammar file fixes and tweaks
+
+## [0.0.7] - 2024-11-29
+
+### Added
+
+- Variable definitions
+
+### Changed
+
+- Grammar file regex tweaks
+
+### Removed
+
+- Module path value in task definitions. Task modules must be in the same directory as the runner script and match the task name
+
+## [0.0.9] - 2025-1-11
+
+### Changed
+
+- Source grammar file patterns updated with syntax changes
+- Script function (r$) pattern added to inline grammar file
+
+## [0.0.10] - 2025-1-12
+
+### Changed
+
+- RUNNER_ALIAS variable pattern removed from source grammar file

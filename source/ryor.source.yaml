@@ -2,41 +2,60 @@ fileTypes:
   - ryor
 
 patterns:
-  - match: ^\s*#.*$
-    name: comment.line.number-sign
+  - comment: Comment
+    match: (#.*)$
+    captures:
+      1: { name: comment.line.number-sign }
 
-  - captures:
+  - comment: Category
+    match: ^\s*(.*):\s*$
+    captures:
       1: { name: entity.name.type.ryor }
-    comment: Category
-    match: ^\s*\[\s*([^\]\n\r]+?)\s*\]\s*$    
 
-  - captures:
+  - comment: Task
+    match: ^\s*([a-z0-9]+(?:-[a-z0-9]+)*)\s*(?:\s*(.*))?$
+    captures:
       1: { name: entity.name.function.ryor }
       2: { name: string.unquoted.ryor }
-      3: { name: variable.other.ryor }
-    comment: Task
-    match: ^\s*([a-z0-9]+(?:-[a-z0-9]+)*)\s*(?::\s*([^\|\n\r]+))?(?:\|\s*((?!\/)[^ \n\r\t]+))?\s*$      
 
-  - captures:
+  - comment: Task Flag Argument
+    match: ^\s*--([a-z0-9]+(?:-[a-z0-9]+)*)(?:\s+-([a-zA-Z0-9])?)?(?:\s+(number|string))?(?:\s+(.+?))?\s*$
+    captures:
       1: { name: variable.parameter.ryor }
-      2: { name: variable.other.ryor }
+      2: { name: variable.parameter.ryor }
+      3: { name: storage.type.ryor }
+      4: { name: string.unquoted.ryor }
+
+  - comment: Task Positional Argument
+    match: ^\s*\.\s*([a-z0-9]+(?:-[a-z0-9]+)*)(?:\s+(number))?(?:\s+(.*?))\s*$
+    captures:
+      1: { name: variable.parameter.ryor }
+      2: { name: storage.type.ryor }
       3: { name: string.unquoted.ryor }
-      4: { name: support.type.ryor }
-    comment: Task flag argument
-    match: ^\s*--([a-z0-9]+(?:-[a-z0-9]+)*)\s*(?:,\s*-([a-zA-Z0-9]))?\s*(?::\s*([^\|\n\r]*?))?(?:\|\s*(boolean|number|string))?$
 
-  - captures:
+  - comment: Task Rest Argument
+    match: ^\s*\.{3}([a-z0-9]+(?:-[a-z0-9]+)*)?(?:\s+(string))?(?:\s+(.+?))?\s*$
+    captures:
       1: { name: variable.parameter.ryor }
-      2: { name: string.unquoted.ryor }
-      3: { name: support.type.ryor }
-    comment: Task positional argument
-    match: ^\s*\.\s*([a-z0-9]+(?:-[a-z0-9]+)*)\s*(?::\s*([^\|\n\r]*?))?(?:\|\s*(number|string))?$
+      2: { name: storage.type.ryor }
+      3: { name: string.unquoted.ryor }
 
-  - captures:
-      1: { name: variable.parameter.ryor }
+  - comment: CHILD_PROCESS_ENV Runner Variable
+    match: ^\s*(CHILD_PROCESS_ENV)\s+([\s\w-]+?)\s*$
+    captures:
+      1: { name: variable.language.ryor }
       2: { name: string.unquoted.ryor }
-      3: { name: support.type.ryor }
-    comment: Task rest argument
-    match: ^\s*\.{3}([a-z0-9]+(?:-[a-z0-9]+)*)\s*(?::\s*([^\|\n\r]*?))?(?:\|\s*(array|string))?$
+
+  - comment: DENO_PERMISSIONS Runner Variable
+    match: ^\s*(DENO_PERMISSIONS)\s+(.+?)\s*$
+    captures:
+      1: { name: variable.language.ryor }
+      2: { name: string.unquoted.ryor }
+
+  - comment: REQUIRED_RUNTIME Runner Variable
+    match: ^\s*(REQUIRED_RUNTIME)\s+(bun|deno|node)\s*$
+    captures:
+      1: { name: variable.language.ryor }
+      2: { name: string.unquoted.ryor }
 
 scopeName: source.ryor

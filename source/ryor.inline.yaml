@@ -1,14 +1,16 @@
-fileTypes:
-  - js
-  - ts
+fileTypes: [js, ts]
 
 injectionSelector: "L:source.js, L:source.ts"
 
 patterns:
   - begin: \bryor\`
     end: \`
-    name: markup.raw.ryor
     patterns:
       - include: source.ryor
+
+  - begin: \br\$\`
+    end: \`
+    patterns:
+      - include: source.shell
 
 scopeName: inline.ryor
