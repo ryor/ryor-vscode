@@ -1,16 +1,17 @@
 {
   "version": "4",
   "specifiers": {
-    "jsr:@ryor/ryor@^1.0.0-beta-48": "1.0.0-beta-48",
-    "npm:@types/node@^22.10.5": "22.10.5",
+    "jsr:@ryor/ryor@^1.0.0-beta-49": "1.0.0-beta-49",
+    "npm:@types/node@*": "22.5.4",
+    "npm:@types/node@^22.10.7": "22.10.7",
     "npm:@vscode/vsce@^3.2.1": "3.2.1",
     "npm:js-yaml@^4.1.0": "4.1.0",
     "npm:ovsx@~0.10.1": "0.10.1",
     "npm:shell-quote@^1.8.2": "1.8.2"
   },
   "jsr": {
-    "@ryor/ryor@1.0.0-beta-48": {
-      "integrity": "6f01898a018ee880ae9a127c6f8763837963cf8ca845aadf6c848d2a9dab88b2",
+    "@ryor/ryor@1.0.0-beta-49": {
+      "integrity": "b9deea08a35960abae9565336f3624c1b83ae209134ab1dd3c8077da42a45176",
       "dependencies": [
         "npm:shell-quote"
       ]
@@ -122,10 +123,16 @@
         "wrap-ansi-cjs@npm:wrap-ansi@7.0.0"
       ]
     },
-    "@types/node@22.10.5": {
-      "integrity": "sha512-F8Q+SeGimwOo86fiovQh8qiXfFEh2/ocYv7tU5pJ3EXMSSxk1Joj5wefpFK2fHTf/N6HKGSxIDBT9f3gCxXPkQ==",
+    "@types/node@22.10.7": {
+      "integrity": "sha512-V09KvXxFiutGp6B7XkpaDXlNadZxrzajcY50EuoLIpQ6WWYCSvf19lVIazzfIzQvhUN2HjX12spLojTnhuKlGg==",
       "dependencies": [
-        "undici-types"
+        "undici-types@6.20.0"
+      ]
+    },
+    "@types/node@22.5.4": {
+      "integrity": "sha512-FDuKUJQm/ju9fT/SeX/6+gBzoPzlVCzfzmGkwKvRHQVxi4BntVbyIwf6a4Xn62mrvndLiml6z/UBXIdEVjQLXg==",
+      "dependencies": [
+        "undici-types@6.19.8"
       ]
     },
     "@vscode/vsce-sign-alpine-arm64@2.0.2": {
@@ -1124,6 +1131,9 @@
     "underscore@1.13.7": {
       "integrity": "sha512-GMXzWtsc57XAtguZgaQViUOzs0KTkk8ojr3/xAxXLITqf/3EMwxC0inyETfDFjH/Krbhuep0HNbbjI9i/q3F3g=="
     },
+    "undici-types@6.19.8": {
+      "integrity": "sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw=="
+    },
     "undici-types@6.20.0": {
       "integrity": "sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg=="
     },
@@ -1209,8 +1219,8 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@ryor/ryor@^1.0.0-beta-48",
-      "npm:@types/node@^22.10.5",
+      "jsr:@ryor/ryor@^1.0.0-beta-49",
+      "npm:@types/node@^22.10.7",
       "npm:@vscode/vsce@^3.2.1",
       "npm:js-yaml@^4.1.0",
       "npm:ovsx@~0.10.1"

@@ -66,3 +66,9 @@ All notable changes to the "ryor-vscode" extension will be documented in this fi
 ### Changed
 
 - RUNNER_ALIAS variable pattern removed from source grammar file
+
+## [0.0.11] - 2025-1-18
+
+### Changed
+
+- CHILD_PROCESS_ENV values are now comma-seperated to match Deno's --allow-env/-E values

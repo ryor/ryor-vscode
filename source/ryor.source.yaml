@@ -41,7 +41,7 @@ patterns:
       3: { name: string.unquoted.ryor }
 
   - comment: CHILD_PROCESS_ENV Runner Variable
-    match: ^\s*(CHILD_PROCESS_ENV)\s+([\s\w-]+?)\s*$
+    match: ^\s*(CHILD_PROCESS_ENV)\s+([\w-]+(?:,[\w-]+)*)\s*$
     captures:
       1: { name: variable.language.ryor }
       2: { name: string.unquoted.ryor }

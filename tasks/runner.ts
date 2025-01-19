@@ -2,7 +2,7 @@ import { ryor } from '@ryor/ryor'
 
 ryor`
 CHILD_PROCESS_ENV PATH
-DENO_PERMISSIONS --allow-run=cat,cp,ls,mkdir,rm,touch,./node_modules/.bin/js-yaml,./node_modules/.bin/ovsx,./node_modules/.bin/vsce -E=PATH -N=jsr.io,registry.npmjs.com -R=./ -W=./build,./dist,./package.json,./tasks
+DENO_PERMISSIONS --allow-run=cat,cp,deno,ls,mkdir,npm,rm,touch,./node_modules/.bin/js-yaml,./node_modules/.bin/ovsx,./node_modules/.bin/vsce -E=PATH -N=jsr.io,registry.npmjs.com -R=./ -W=./build,./deno.json,./dist,./tasks
 REQUIRED_RUNTIME deno
 
 build Builds extension
