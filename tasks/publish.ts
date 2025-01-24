@@ -8,7 +8,9 @@ type PublishTaskFunctionArguments = {
 export default async ({ ovsxToken, vsceToken }: PublishTaskFunctionArguments) => {
   if (!ovsxToken && !vsceToken) await r$`log -brnx Open VSX Registry or Visual Studio Marketplace access token required + echo + help`
 
-  await r$`log -bitwl publish Publishing...`
+  await r$`
+    log -bitwl publish Publishing...
+  `.allowInput()
 
   const { version } = await r$`cat source/package.json`.json()
   const filePath = `dist/ryor-vscode-${version}.vsix`

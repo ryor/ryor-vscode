@@ -1,8 +1,0 @@
-command -v complete > /dev/null && complete -W 'build js-yaml log publish update update-aliases' tasks
-alias tasks='cd /home/dev/Projects/ryor-vscode && deno --allow-run=cat,cp,deno,ls,mkdir,npm,rm,touch,./node_modules/.bin/js-yaml,./node_modules/.bin/ovsx,./node_modules/.bin/vsce -E=PATH -N=jsr.io,registry.npmjs.com -R=./ -W=./build,./deno.json,./dist,./tasks tasks/runner.ts --aliased'
-alias build='tasks build'
-alias js-yaml='tasks js-yaml'
-alias log='tasks log'
-alias publish='tasks publish'
-alias update='tasks update'
-alias update-aliases='tasks update-aliases'

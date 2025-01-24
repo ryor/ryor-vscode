@@ -1,17 +1,17 @@
 {
   "version": "4",
   "specifiers": {
-    "jsr:@ryor/ryor@^1.0.0-beta-49": "1.0.0-beta-49",
+    "jsr:@ryor/ryor@^1.0.0-beta-52": "1.0.0-beta-52",
     "npm:@types/node@*": "22.5.4",
-    "npm:@types/node@^22.10.7": "22.10.7",
+    "npm:@types/node@^22.10.10": "22.10.10",
     "npm:@vscode/vsce@^3.2.1": "3.2.1",
     "npm:js-yaml@^4.1.0": "4.1.0",
     "npm:ovsx@~0.10.1": "0.10.1",
     "npm:shell-quote@^1.8.2": "1.8.2"
   },
   "jsr": {
-    "@ryor/ryor@1.0.0-beta-49": {
-      "integrity": "b9deea08a35960abae9565336f3624c1b83ae209134ab1dd3c8077da42a45176",
+    "@ryor/ryor@1.0.0-beta-52": {
+      "integrity": "b3a30c85e9af047279d9f7f08596b07d8a147f96effaf76a0f260574445ae338",
       "dependencies": [
         "npm:shell-quote"
       ]
@@ -123,8 +123,8 @@
         "wrap-ansi-cjs@npm:wrap-ansi@7.0.0"
       ]
     },
-    "@types/node@22.10.7": {
-      "integrity": "sha512-V09KvXxFiutGp6B7XkpaDXlNadZxrzajcY50EuoLIpQ6WWYCSvf19lVIazzfIzQvhUN2HjX12spLojTnhuKlGg==",
+    "@types/node@22.10.10": {
+      "integrity": "sha512-X47y/mPNzxviAGY5TcYPtYL8JsY3kAq2n8fMmKoRCxq/c4v4pyGNCzM2R6+M5/umG4ZfHuT+sgqDYqWc9rJ6ww==",
       "dependencies": [
         "undici-types@6.20.0"
       ]
@@ -1219,8 +1219,8 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@ryor/ryor@^1.0.0-beta-49",
-      "npm:@types/node@^22.10.7",
+      "jsr:@ryor/ryor@^1.0.0-beta-52",
+      "npm:@types/node@^22.10.10",
       "npm:@vscode/vsce@^3.2.1",
       "npm:js-yaml@^4.1.0",
       "npm:ovsx@~0.10.1"

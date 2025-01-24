@@ -72,3 +72,9 @@ All notable changes to the "ryor-vscode" extension will be documented in this fi
 ### Changed
 
 - CHILD_PROCESS_ENV values are now comma-seperated to match Deno's --allow-env/-E values
+
+## [0.0.12] - 2025-1-23
+
+### Removed
+
+- Script function (r$) pattern removed from inline grammar file until proper injection syntax can be worked out

@@ -8,9 +8,4 @@ patterns:
     patterns:
       - include: source.ryor
 
-  - begin: \br\$\`
-    end: \`
-    patterns:
-      - include: source.shell
-
 scopeName: inline.ryor
