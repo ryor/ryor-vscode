@@ -10,9 +10,9 @@
     "singleQuote": true
   },
   "imports": {
-    "@ryor/ryor": "jsr:@ryor/ryor@^1.0.0-beta-52",
-    "@types/node": "npm:@types/node@^22.10.10",
-    "@vscode/vsce": "npm:@vscode/vsce@^3.2.1",
+    "@ryor/ryor": "jsr:@ryor/ryor@^1.0.0-beta-70",
+    "@types/node": "npm:@types/node@^22.13.2",
+    "@vscode/vsce": "npm:@vscode/vsce@^3.2.2",
     "js-yaml": "npm:js-yaml@^4.1.0",
     "ovsx": "npm:ovsx@^0.10.1"
   },

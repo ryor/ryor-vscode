@@ -46,14 +46,14 @@ patterns:
       1: { name: variable.language.ryor }
       2: { name: string.unquoted.ryor }
 
-  - comment: DENO_PERMISSIONS Runner Variable
-    match: ^\s*(DENO_PERMISSIONS)\s+(.+?)\s*$
+  - comment: RUNTIME_FLAGS Runner Variable
+    match: ^\s*(RUNTIME_FLAGS)\s+(.+?)\s*$
     captures:
       1: { name: variable.language.ryor }
       2: { name: string.unquoted.ryor }
 
-  - comment: REQUIRED_RUNTIME Runner Variable
-    match: ^\s*(REQUIRED_RUNTIME)\s+(bun|deno|node)\s*$
+  - comment: RUNTIME_REQUIRED Runner Variable
+    match: ^\s*(RUNTIME_REQUIRED)\s+(bun|deno|node)\s*$
     captures:
       1: { name: variable.language.ryor }
       2: { name: string.unquoted.ryor }

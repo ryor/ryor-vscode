@@ -1,7 +1,7 @@
 {
   "name": "ryor-vscode",
   "description": "Syntax highlighting for ryor task definitions",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "author": "Scott Steven Rodriguez <scott@movecodemove.com>",
   "bugs": {
     "url": "https://github.com/ryor/ryor-vscode/issues",

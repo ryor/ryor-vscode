@@ -7,13 +7,13 @@ export default async () => {
     mkdir -p build
   `
 
-  const [inline, source] = await Promise.all([r$`js-yaml source/ryor.inline.yaml`.quiet(), r$`js-yaml source/ryor.source.yaml`.quiet()])
+  const { exitCode, output: [inline, source] } = await r$`js-yaml source/ryor.inline.yaml +. js-yaml source/ryor.source.yaml`.captureOutput()
 
-  if (inline.exitCode === 0) await writeFile(`build/ryor.inline.json`, inline.stdout)
-  else console.error(inline.stderr.toString())
+  if (!inline.exitCode) await writeFile(`build/ryor.inline.json`, inline.stdout)
+  else console.error(inline.stderr!.toString())
 
-  if (source.exitCode === 0) await writeFile(`build/ryor.source.json`, source.stdout)
-  else console.error(source.stderr.toString())
+  if (!source.exitCode) await writeFile(`build/ryor.source.json`, source.stdout)
+  else console.error(source.stderr!.toString())
 
-  await r$`log -bs${inline.exitCode === 0 && source.exitCode === 0 ? 'cg' : 'rx'}l js-yaml`
+  if (!exitCode) await r$`log -bscgl js-yaml`
 }

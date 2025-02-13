@@ -78,3 +78,10 @@ All notable changes to the "ryor-vscode" extension will be documented in this fi
 ### Removed
 
 - Script function (r$) pattern removed from inline grammar file until proper injection syntax can be worked out
+
+## [0.0.13] - 2025-2-13
+
+### Changed
+
+- Runner variable DENO_PERMISSIONS changed to RUNTIME_FLAGS
+- Runner variable REQUIRED_RUNTIME changed to RUNTIME_REQUIRED

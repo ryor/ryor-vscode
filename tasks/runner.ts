@@ -2,8 +2,8 @@ import { ryor } from '@ryor/ryor'
 
 ryor`
 CHILD_PROCESS_ENV PATH
-DENO_PERMISSIONS --allow-run=cat,cp,deno,ls,mkdir,npm,rm,touch,./node_modules/.bin/js-yaml,./node_modules/.bin/ovsx,./node_modules/.bin/vsce -E=PATH -N=jsr.io,registry.npmjs.com -R=./ -W=./build,./deno.json,./dist,./tasks
-REQUIRED_RUNTIME deno
+RUNTIME_FLAGS --allow-run=cat,cp,deno,echo,ls,mkdir,npm,rm,touch,./node_modules/.bin/js-yaml,./node_modules/.bin/ovsx,./node_modules/.bin/vsce -E=PATH -N=jsr.io,registry.npmjs.com -R=./ -W=./build,./deno.json,./dist,./tasks
+RUNTIME_REQUIRED deno
 
 build Builds extension
 
@@ -26,8 +26,8 @@ log Logs a message with a timestamp, a message type icon character and an option
   ...message string The log message
 
 publish Publishes extension to the Open VSX Registry or the Visual Studio Marketplace
-  --ovsx-token -o string Open VSX Registry access token (required)
-  --vsce-token -v string Visual Studio Marketplace access token (required)
+  --ovsx-token -o string Open VSX Registry access token
+  --vsce-token -v string Visual Studio Marketplace access token
 
 update Updates dependencies to their latest versions
 `

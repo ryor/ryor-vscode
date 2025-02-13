@@ -1,10 +1,10 @@
 import { r$ } from '@ryor/ryor'
 import { writeFile } from 'node:fs/promises'
+import denoJSON from '../deno.json' with { type: 'json' }
 
 export default async () => {
   await r$`log -bitwl update Checking if all dependencies are updated to their latest versions...`
 
-  const denoJSON = await r$`cat deno.json`.json()
   const imports = Object.entries(denoJSON.imports) as [string, string][]
   const currentVersions = Object.fromEntries(imports.map(([name, version]) => [name, version.split('@^')[1]])) as Record<string, string>
   const [jsrUpdatedVersions, npmUpdatedVersions] = (await Promise.all([
