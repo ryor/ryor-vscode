@@ -58,4 +58,10 @@ patterns:
       1: { name: variable.language.ryor }
       2: { name: string.unquoted.ryor }
 
+  - comment: WORKING_DIRECTORY Runner Variable
+    match: ^\s*(WORKING_DIRECTORY)\s+(.+?)\s*$
+    captures:
+      1: { name: variable.language.ryor }
+      2: { name: string.unquoted.ryor }
+
 scopeName: source.ryor

@@ -10,11 +10,11 @@
     "singleQuote": true
   },
   "imports": {
-    "@ryor/ryor": "jsr:@ryor/ryor@^1.0.0-beta-70",
-    "@types/node": "npm:@types/node@^22.13.2",
-    "@vscode/vsce": "npm:@vscode/vsce@^3.2.2",
+    "@ryor/ryor": "jsr:@ryor/ryor@^1.0.0-beta-76",
+    "@types/node": "npm:@types/node@^24.0.4",
+    "@vscode/vsce": "npm:@vscode/vsce@^3.6.0",
     "js-yaml": "npm:js-yaml@^4.1.0",
-    "ovsx": "npm:ovsx@^0.10.1"
+    "ovsx": "npm:ovsx@^0.10.4"
   },
   "nodeModulesDir": "auto"
 }

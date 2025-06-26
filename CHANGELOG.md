@@ -85,3 +85,9 @@ All notable changes to the "ryor-vscode" extension will be documented in this fi
 
 - Runner variable DENO_PERMISSIONS changed to RUNTIME_FLAGS
 - Runner variable REQUIRED_RUNTIME changed to RUNTIME_REQUIRED
+
+## [0.0.14] - 2025-6-25
+
+### Added
+
+- Runner variable WORKING_DIRECTORY added
